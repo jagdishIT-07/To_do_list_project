@@ -1,0 +1,124 @@
+body{
+    overflow-x: hidden;
+}
+.author h3 {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: skyblue;
+    height: 60px;
+    width:fit-content;
+    /* top: 20px; */
+    left: 650px;
+    border-radius: 30%;
+    transition: 4s;
+}
+img{
+    transition: 2s ease-in-out;
+    cursor: pointer;
+}
+img:hover{
+    transform: translateX(294px);
+    /* position: relative; 
+    left: 200px; */
+}
+.container1{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    display: flex;
+    top: 64%;
+    justify-content: center;
+     bottom: 50px;
+    left: 2%;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(135deg);
+}
+.container1 span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid white;
+    animation: move 8s ease-in-out infinite;
+    box-shadow: 0px 0px 10px grey inset;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes move{
+    0%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+    25%{
+        transform: translateZ(100px);
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+       transform: translateZ(100px); 
+       width: 15%;
+        height: 15%;
+    }
+    75%{
+        transform: translateZ(-100px);
+        width: 15%;
+        height: 15%;
+    }
+    100%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+}
+.container2{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 82%;
+    top: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(1500deg);
+}
+.container2 span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid white;
+    animation: move1 8s ease-in-out infinite;
+    box-shadow: 0px 0px 10px grey inset;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes move1{
+    0%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+    25%{
+        transform: translateZ(100px);
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+       transform: translateZ(100px); 
+       width: 15%;
+        height: 15%;
+    }
+    75%{
+        transform: translateZ(-100px);
+        width: 15%;
+        height: 15%;
+    }
+    100%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+}
